@@ -46,7 +46,11 @@
 
 #endif // #if !defined(__cplusplus_winrt)
 #else  // LINUX or APPLE
+
+#ifndef __STDC_LIMIT_MACROS
 #define __STDC_LIMIT_MACROS
+#endif
+
 #include "pthread.h"
 #include <atomic>
 #include <cstdint>

@@ -136,6 +136,7 @@ protected:
     typedef typename std::char_traits<CharType>::int_type int_type;
     virtual int_type NextCharacter() = 0;
     virtual int_type PeekCharacter() = 0;
+    virtual ~JSON_Parser() = default;
 
     virtual bool CompleteComment(Token& token);
     virtual bool CompleteStringLiteral(Token& token);
